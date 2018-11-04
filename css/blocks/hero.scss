@@ -1,0 +1,93 @@
+.hero {
+  background: url('../img/bg/hero-bg.jpg') center center no-repeat;
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+.header {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  position: absolute;
+  top: 12px;
+  justify-content: space-between;
+}
+
+
+
+.header__btns {
+  display: flex;
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav {
+  margin-right: 15px;
+}
+
+.hero__container {
+  flex: 1;
+}
+
+.hero__content {
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.hero__text {
+  color: #fff;
+}
+
+.nav__list {
+  display: flex;
+}
+
+.nav__item {
+  &:last-child {
+    .nav__link:after {
+      display: none;
+    }
+  }
+}
+
+.nav__link {
+  color: #fff;
+  @include ubuntu();
+  font-size: 13px;
+  font-weight: 500;
+  line-height: 30px;
+  text-transform: uppercase;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: #fff;
+    margin: 0 16px;
+  }
+}
+
+.hero__pic {
+  width: 50%;
+}
+
+.hero__text {
+  width: 50%;
+}
+
+.hero__desc {
+  line-height: 60px;
+  font-size: 65px;
+  font-weight: 500;
+  @include lifehack();
+  color: #fff;
+  letter-spacing: -1.63px;
+}
