@@ -1,0 +1,74 @@
+.section_menu {
+    background-image: url("../img/bg/menu.png");
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    padding: rem(111px) rem(102px);
+    position: relative;
+}
+
+.accordion-menu {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.accordion-menu__list {
+    display: flex;
+
+}
+
+.accordion-menu__elem {
+    display: flex;
+    .accordion-menu__drop{
+        width: 0;
+        overflow: hidden;
+    }
+}
+.accordion-menu__elem_active{
+    .accordion-menu__link-text{
+        color: $yellow;
+    }
+    .accordion-menu__drop{
+        width: initial;
+        overflow: initial;
+    }
+
+}
+
+.accordion-menu__link {
+    position: relative;
+    width: rem(80px);
+    flex: 1 0 auto;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.accordion-menu__link-text {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: rotate(-90deg) translateY(-50%);
+    white-space: nowrap;
+    color: #fff;
+    transform-origin: 0 0;
+    margin-top: rem(-20px);
+    font-size: rem(40px);
+    font-weight: 400;
+    line-height: rem(75px);
+    @include gagalin();
+}
+
+.accordion-menu__text {
+    color: #fff;
+    padding: rem(30px);
+    width: rem(500px);
+}
+
+.accordion-menu__drop {
+    background-color: rgba(47, 50, 52, 0.9);
+}

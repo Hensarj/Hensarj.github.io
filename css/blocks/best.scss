@@ -9,7 +9,7 @@
 
 
 .best__item {
-  margin-right: 37px;
+  margin-right: rem(37px);
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -21,21 +21,22 @@
 }
 
 .best__icon {
-  margin-bottom: 30px;
+  margin-bottom: rem(30px);
 }
 
-.best__title{
-  margin-bottom: 25px;
+.best__title {
+  margin-bottom: rem(25px);
 }
+
 .best__title {
   @include lifehack();
-  font-size: 24px;
+  font-size: rem(24px);
   font-weight: 500;
-  line-height: 28.14px;
-  letter-spacing: -0.6px;
+  line-height: rem(14px);
+  letter-spacing: rem(-0.6px);
 }
 
-.best__text{
+.best__text {
   text-align: justify;
   text-align-last: center;
 }

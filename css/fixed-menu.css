@@ -1,0 +1,41 @@
+.fixed-menu {
+  position: fixed;
+  top: rem(80px);
+  right: rem(45px);
+}
+
+.fixed-menu__item {
+  margin-bottom: rem(10px);
+}
+
+.fixed-menu__item.active .fixed-menu__link {
+  border-color: #fff;
+}
+
+.fixed-menu__link {
+  width: rem(16px);
+  height: rem(16px);
+  border-radius: 50%;
+  position: relative;
+  display: block;
+  border: rem(1px) solid transparent;
+}
+
+.fixed-menu__link:hover {
+  border-color: #fff;
+}
+
+.fixed-menu__link:before {
+  content: "";
+  display: block;
+  width: rem(6px);
+  height: rem(6px);
+  border-radius: 50%;
+  background: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+/*# sourceMappingURL=fixed-menu.css.map */

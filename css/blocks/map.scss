@@ -1,0 +1,65 @@
+
+
+.footer {
+    position: absolute;
+    bottom: rem(0px);
+    background-color: #000;
+}
+
+.footer-content {
+    padding: rem(10px) rem(80px);
+    display: flex;
+}
+
+.footer__socials {
+    display: flex;
+    align-items: center;
+    flex: 1;
+    justify-content: flex-end;
+}
+
+.footer__contacts {
+    flex: 1;
+}
+
+.contacts__address {
+    @include ubuntu();
+    font-weight: 300;
+    color: #ffffff;
+    font-size: rem(14px);
+    line-height: rem(24px);
+    margin-bottom: rem(10px);
+}
+
+.contacts__phone {
+    text-decoration: none;
+    color: $orange;
+    display: flex;
+    align-items: center;
+    font-size: rem(14px);
+    line-height: rem(24px);
+    font-weight: 700 !important;
+    @include ubuntu();
+}
+
+.contacts__phone::before {
+    content: "";
+    width: rem(12px);
+    height: rem(11px);
+    margin-right: rem(5px);
+    background-image: url('/img/icons/phone.svg');
+}
+
+.socials__list {
+    display: flex;
+}
+
+.socials__item {
+    width: rem(20px);
+    height: rem(20px);
+    margin-left: rem(20px);
+    .socials__link{
+        fill: #ffffff;
+    }
+
+}

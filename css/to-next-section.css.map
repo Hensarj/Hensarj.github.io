@@ -1,0 +1,9 @@
+{
+    "version": 3,
+    "mappings": "AAAA,AAAA,gBAAgB,CAAC;EACb,UAAU,EAAE,oCAAoC;EAChD,KAAK,EAAE,SAAS;EAChB,MAAM,EAAE,SAAS;EACjB,QAAQ,EAAE,QAAQ;EAClB,MAAM,EAAE,SAAS;EACjB,IAAI,EAAE,GAAG;EACT,SAAS,EAAC,sBAAqB;EAC/B,MAAM,EAAE,IAAI;CACf",
+    "sources": [
+        "blocks/common/to-next-section.scss"
+    ],
+    "names": [],
+    "file": "to-next-section.css"
+}

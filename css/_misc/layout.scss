@@ -2,9 +2,12 @@ html,
 body {
   height: 100%;
 }
+html{
+  font-size: 16px;
+}
 
 body {
-  font-size: 16px;
+  font-size: rem(16px);
   line-height: 1.42;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
@@ -16,7 +19,7 @@ body {
 .container {
   margin: 0 auto;
   position: relative;
-  width: 940px;
+  width: 85%;
   display: flex;
   flex-direction: column;
 }
@@ -24,7 +27,7 @@ body {
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: 940px + 20px;
+  min-width: rem(940px) + rem(20px);
   min-height: 100%;
   overflow: hidden;
 }
@@ -69,7 +72,7 @@ footer {
 }
 
 .section {
-  min-height: 650px;
+  min-height: rem(650px);
   height: 100vh;
 
   &_centered {
@@ -80,10 +83,10 @@ footer {
 }
 
 .section-title {
-  font-size: 72px;
+  font-size: rem(72px);
   @include gagalin();
   color: $yellow;
-  margin-bottom: 40px;
+  margin-bottom: rem(40px);
 
   &_color {
     &_black {

@@ -1,0 +1,52 @@
+.order {
+  background: url("../img/bg/order.jpg") center center no-repeat;
+  background-size: cover;
+}
+
+.form__block-title {
+  color: #fff;
+  margin-bottom: 65px;
+}
+
+.form__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.form__input {
+  border: none;
+  border-radius: 5px;
+  padding: 5px;
+  width: 100%;
+}
+
+.form__col {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.form__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 20px;
+}
+
+.form__block {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  margin-right: 19px;
+  margin-bottom: 19px;
+}
+
+.form__block:last-child {
+  margin-right: 0;
+}
+
+.form__block-title {
+  margin-bottom: 9px;
+}
+/*# sourceMappingURL=order.css.map */

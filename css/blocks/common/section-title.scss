@@ -1,11 +1,17 @@
 .section-title {
   @include gagalin();
-  font-size: 72px;
+  font-size: rem(72px);
   color: $yellow;
-  margin-bottom: 25px;
+  margin-bottom: rem(25px);
 
   &_color_black {
     color: $black;
+  }
+  &_color_white{
+    color: $white;
+  }
+  &_centered{
+    text-align: center;
   }
 }
 

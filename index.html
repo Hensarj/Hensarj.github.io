@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <title>Главная страница
   </title>
   <link rel="stylesheet" href="./css/main.css">
@@ -55,6 +55,9 @@
                 </ul>
               </nav>
               <a href="#" class="btn">Заказать</a>
+              <a class="hamburger-menu-link" href="">
+                <div class="hamburger-menu-link__bars"></div>
+              </a>
             </div>
 
           </header>
@@ -125,7 +128,7 @@
         </div>
       </section>
 
-      <!-- <section class="section team">
+      <section class="section team">
         <div class="team__container">
           <div class="team__content">
             <div class="section-title">Команда</div>
@@ -140,16 +143,30 @@
                     <div class="team-acco__text-title">Оператор</div>
                     <div class="team-acco__text-content">
                       <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nam maxime nisi voluptates rem
-                        voluptatum sed eum dolorum,
-                        ad facilis!
+                        С радостью поможет подобрать идеальный бургер и оформить заказ.
                       </p>
                     </div>
                   </div>
                 </div>
               </li>
               <li class="team-acco__item team-acco__item_active">
-                <a href="#" class="team-acco__trigger">Дэниел Редклифф</a>
+                <a href="#" class="team-acco__trigger">Ричард Джеймс</a>
+                <div class="team-acco__content">
+                  <div class="team-acco__pic">
+                    <img class="team-acco__pic-img" src="./img/content/teammate.jpg" alt="">
+                  </div>
+                  <div class="team-acco__text">
+                    <div class="team-acco__text-title">Оператор</div>
+                    <div class="team-acco__text-content">
+                      <p>
+                        С радостью поможет подобрать идеальный бургер и оформить заказ.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </li>
+              <li class="team-acco__item">
+                <a href="#" class="team-acco__trigger">Джейк Финн</a>
                 <div class="team-acco__content">
                   <div class="team-acco__pic">
                     <img class="team-acco__pic-img" src="./img/content/teammate.jpg" alt="">
@@ -167,25 +184,7 @@
                 </div>
               </li>
               <li class="team-acco__item">
-                <a href="#" class="team-acco__trigger">Дэниел Редклифф</a>
-                <div class="team-acco__content">
-                  <div class="team-acco__pic">
-                    <img class="team-acco__pic-img" src="./img/content/teammate.jpg" alt="">
-                  </div>
-                  <div class="team-acco__text">
-                    <div class="team-acco__text-title">Оператор</div>
-                    <div class="team-acco__text-content">
-                      <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia nam maxime nisi voluptates rem
-                        voluptatum sed eum dolorum,
-                        ad facilis!
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li class="team-acco__item">
-                <a href="#" class="team-acco__trigger">Дэниел Редклифф</a>
+                <a href="#" class="team-acco__trigger">Николай Иванов</a>
                 <div class="team-acco__content">
                   <div class="team-acco__pic">
                     <img class="team-acco__pic-img" src="./img/content/teammate.jpg" alt="">
@@ -205,7 +204,7 @@
             </ul>
           </div>
         </div>
-      </section> -->
+      </section>
 
       <section class="section reviews">
         <ul class="reviews__list">
@@ -284,59 +283,219 @@
         </ul>
       </section>
 
-      <!-- <section class="section order section_centered">
+      <section class="section order section_centered">
         <div class="container">
-          <div class="section-title">Закажите доставку</div>
+          <div class="section-title section-title_centered">Закажите доставку</div>
           <div class="form">
             <form action="" class="form__elem">
               <div class="form__content">
-                <div class="form__row">
-                  <label class="form__block">
-                    <div class="form__block-title">Имя</div>
-                    <input type="text" class="form__input">
-                  </label>
-                  <label class="form__block">
-                    <div class="form__block-title">Имя</div>
-                    <input type="text" class="form__input">
-                  </label>
+                <div class="form__col">
+                  <div class="form__row">
+                    <label class="form__block">
+                      <div class="form__block-title">Имя</div>
+                      <input type="text" class="form__input">
+                    </label>
+                    <label class="form__block">
+                      <div class="form__block-title">Телефон</div>
+                      <input type="text" class="form__input">
+                    </label>
+                  </div>
+                  <div class="form__row">
+                    <label class="form__block">
+                      <div class="form__block-title">Улица</div>
+                      <input type="text" class="form__input">
+                    </label>
+                  </div>
+                  <div class="form__row">
+                    <label class="form__block">
+                      <div class="form__block-title">Дом</div>
+                      <input type="text" class="form__input">
+                    </label>
+                    <label class="form__block">
+                      <div class="form__block-title">Корпус</div>
+                      <input type="text" class="form__input">
+                    </label>
+                    <label class="form__block">
+                      <div class="form__block-title">Квартира</div>
+                      <input type="text" class="form__input">
+                    </label>
+                    <label class="form__block">
+                      <div class="form__block-title">Этаж</div>
+                      <input type="text" class="form__input">
+                    </label>
+                  </div>
                 </div>
-                <div class="form__row">
-                  <label class="form__block">
-                    <div class="form__block-title">Улица</div>
-                    <input type="text" class="form__input">
-                  </label>
-                </div>
-                <div class="form__row">
-                  <label class="form__block">
-                    <div class="form__block-title">Дом1</div>
-                    <input type="text" class="form__input">
-                  </label>
-                  <label class="form__block">
-                    <div class="form__block-title">дом2</div>
-                    <input type="text" class="form__input">
-                  </label>
-                  <label class="form__block">
-                    <div class="form__block-title">дом 3</div>
-                    <input type="text" class="form__input">
-                  </label>
-                  <label class="form__block">
-                    <div class="form__block-title">дом 4</div>
-                    <input type="text" class="form__input">
-                  </label>
+                <div class="form__col">
+                  <div class="form__row">
+                    <label class="form__block">
+                      <div class="form__block-title">Комментарий</div>
+                      <textarea class="form__input_textarea"></textarea>
+                    </label>
+                  </div>
+                  <div class="order__form-buttons">
+                    <div class="form__row form__row_flex">
+                      <label class="order__radio">
+                        <input type="radio" name="payment" class="order__radio-elem">
+                        <div class="order__radio-fake"></div>
+                        <div class="order__radio-title">Потребуется сдача</div>
+                      </label>
+                      <label class="order__radio">
+                        <input type="radio" name="payment" class="order__radio-elem">
+                        <div class="order__radio-fake"></div>
+                        <div class="order__radio-title">Оплата по карте</div>
+                      </label>
+                    </div>
+                    <div class="form__row">
+                      <label class="order__radio order__radio_checkbox">
+                        <input type="checkbox" class="order__radio-elem" name="callback">
+                        <div class="order__radio-fake">
+                          <span class="checkmark">
+                            <div class="checkmark__stem"></div>
+                            <div class="checkmark__kick"></div>
+                          </span>
+                        </div>
+                        <div class="order__radio-title">Не перезванивать</div>
+                      </label>
+                    </div>
+
+                  </div>
+                  <div class="form__row form__row_mt">
+                    <a href="#" class="btn">Заказать</a>
+                    <a href="#" class="btn btn_bg-transparent">Очистить</a>
+                  </div>
                 </div>
               </div>
             </form>
           </div>
         </div>
-      </section> -->
+      </section>
 
-      <!-- <section class="section"></section>
+      <section class="section section_menu" data-anchor="section_menu">
+        <div class="section-title section-title_color_white section_menu__section_title">меню</div>
+        <div class="accordion-menu">
+          <ul class="accordion-menu__list accordion-menu__list_active">
+            <li class="accordion-menu__elem accordion-menu__elem_active">
+              <a href="#" class="accordion-menu__link" style="background-image: url('./img/content/menu/for_meateaters.png')"><span
+                  class="accordion-menu__link-text">Для мясоедов</span></a>
+              <div class="accordion-menu__drop">
+                <div class="accordion-menu__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quos temporibus tempore, sequi
+                  delectus rem non natus ex. Dolorum omnis eveniet, assumenda rem earum animi autem ea explicabo
+                  tenetur facere.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quos temporibus tempore, sequi
+                  delectus rem non natus ex. Dolorum omnis eveniet, assumenda rem earum animi autem ea explicabo
+                  tenetur facere.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quos temporibus tempore, sequi
+                  delectus rem non natus ex. Dolorum omnis eveniet, assumenda rem earum animi autem ea explicabo
+                  tenetur facere.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quos temporibus tempore, sequi
+                  delectus rem non natus ex. Dolorum omnis eveniet, assumenda rem earum animi autem ea explicabo
+                  tenetur facere.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quos temporibus tempore, sequi
+                  delectus rem non natus ex. Dolorum omnis eveniet, assumenda rem earum animi autem ea explicabo
+                  tenetur facere.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quos temporibus tempore, sequi
+                  delectus rem non natus ex. Dolorum omnis eveniet, assumenda rem earum animi autem ea explicabo
+                  tenetur facere.
+                </div>
 
-      <section class="section"></section>
+              </div>
+            </li>
+            <li class="accordion-menu__elem">
+              <a href="#" class="accordion-menu__link" style="background-image: url(img/content/menu/for_vegiterians.png);"><span
+                  class="accordion-menu__link-text">Вегетарианское</span></a>
+              <div class="accordion-menu__drop">
+                <div class="accordion-menu__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quos temporibus tempore, sequi
+                  delectus rem non natus ex. Dolorum omnis eveniet, assumenda rem earum animi autem ea explicabo
+                  tenetur facere.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quos temporibus tempore, sequi
+                  delectus rem non natus ex. Dolorum omnis eveniet, assumenda rem earum animi autem ea explicabo
+                  tenetur facere.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quos temporibus tempore, sequi
+                  delectus rem non natus ex. Dolorum omnis eveniet, assumenda rem earum animi autem ea explicabo
+                  tenetur facere.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quos temporibus tempore, sequi
+                  delectus rem non natus ex. Dolorum omnis eveniet, assumenda rem earum animi autem ea explicabo
+                  tenetur facere.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quos temporibus tempore, sequi
+                  delectus rem non natus ex. Dolorum omnis eveniet, assumenda rem earum animi autem ea explicabo
+                  tenetur facere.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quos temporibus tempore, sequi
+                  delectus rem non natus ex. Dolorum omnis eveniet, assumenda rem earum animi autem ea explicabo
+                  tenetur facere.
+                </div>
 
-      <section class="section"></section> -->
+              </div>
+            </li>
+            <li class="accordion-menu__elem">
+              <a href="#" class="accordion-menu__link" style="background-image: url(img/content/menu/for_diet.png);"><span
+                  class="accordion-menu__link-text">Диетическое</span></a>
+              <div class="accordion-menu__drop">
+                <div class="accordion-menu__text">
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quos temporibus tempore, sequi
+                  delectus rem non natus ex. Dolorum omnis eveniet, assumenda rem earum animi autem ea explicabo
+                  tenetur facere.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quos temporibus tempore, sequi
+                  delectus rem non natus ex. Dolorum omnis eveniet, assumenda rem earum animi autem ea explicabo
+                  tenetur facere.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quos temporibus tempore, sequi
+                  delectus rem non natus ex. Dolorum omnis eveniet, assumenda rem earum animi autem ea explicabo
+                  tenetur facere.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quos temporibus tempore, sequi
+                  delectus rem non natus ex. Dolorum omnis eveniet, assumenda rem earum animi autem ea explicabo
+                  tenetur facere.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quos temporibus tempore, sequi
+                  delectus rem non natus ex. Dolorum omnis eveniet, assumenda rem earum animi autem ea explicabo
+                  tenetur facere.
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem quos temporibus tempore, sequi
+                  delectus rem non natus ex. Dolorum omnis eveniet, assumenda rem earum animi autem ea explicabo
+                  tenetur facere.
+                </div>
+
+              </div>
+            </li>
+          </ul>
+
+        </div>
+      </section>
+      <section class="section map">
+        <footer class="footer">
+          <div class="footer-content">
+            <div class="contacts footer__contacts">
+              <div class="contacts__address">Санкт-Петербург, ул.Бабушкина, д.12/1, 15</div>
+              <a class="contacts__phone" href="tel:+78123771377">+7 (812) 377-13-77</a>
+            </div>
+            <div class="socials footer__socials">
+              <ul class="socials__list">
+                <li class="socials__item">
+                  <svg>
+                    <use></use>
+                  </svg>
+                </li>
+                <li class="socials__item"><object class="socials__link socials__link_active" type="image/svg+xml" data="./img/icons/socials/vk.svg"
+                    width="20" height="20">
+                    <img src="SvgImg.png" width="200" height="200" />
+                  </object></li>
+                <li class="socials__item"><object class="socials__link social" type="image/svg+xml" data="./img/icons/socials/fb.svg"
+                    width="20" height="20">
+                    <img src="SvgImg.png" width="200" height="200" />
+                  </object></li>
+                <li class="socials__item"><object class="socials__link social" type="image/svg+xml" data="./img/icons/socials/instagram.svg"
+                    width="20" height="20">
+                    <img src="SvgImg.png" width="200" height="200" />
+                  </object></li>
+                <li class="socials__item"><object class="socials__link social" type="image/svg+xml" data="./img/icons/socials/twitter.svg"
+                    width="20" height="20">
+                    <img src="SvgImg.png" width="200" height="200" />
+                  </object></li>
+
+              </ul>
+            </div>
+          </div>
+        </footer>
     </div>
-    <ul class="fixed-menu"></ul>
+
   </div>
   <ul class="fixed-menu">
     <li class="fixed-menu__item active">
