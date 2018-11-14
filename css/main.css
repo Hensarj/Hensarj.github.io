@@ -858,7 +858,7 @@ footer {
       -webkit-box-direction: normal;
       -ms-flex-direction: row;
       flex-direction: row;
-      margin-bottom: 50px; } }
+      margin-bottom: 0.625rem; } }
   .best__item:last-child {
     margin-right: 0; }
 
@@ -870,7 +870,7 @@ footer {
   flex: 1 0 auto; }
   @media screen and (max-width: 480px) {
     .best__icon {
-      margin-right: 28px; } }
+      margin-right: 0.625rem; } }
 
 .best__pic-img {
   width: 100%; }
