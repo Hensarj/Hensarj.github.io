@@ -2,6 +2,18 @@
     @return $px / 16px+0rem;
 }
 
+@mixin for920px {
+    @media screen and (max-width: 960px) {
+        @content;
+    }
+}
+
+@mixin for890px{
+    @media screen and (max-width: 860px) {
+        @content;
+    }
+}
+
 @mixin tablets {
     @media screen and (max-width: $tablets) {
         @content;

@@ -35,9 +35,15 @@
   height: 100%;
   display: flex;
   align-items: center;
+
+  @include tablets {
+    flex-direction: column;
+    justify-content: center;
+  }
 }
 
 .hero__text {
+  padding-left: rem(11px);
   color: #fff;
 }
 
@@ -84,13 +90,15 @@
   text-decoration: none;
   display: flex;
   align-items: center;
-
-
 }
 
 .hero__pic {
   width: 50%;
   text-align: center;
+
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .hero__pic-img {
@@ -99,15 +107,26 @@
 
 .hero__text {
   width: 50%;
+  @include tablets {
+    width: 100%;
+  }
 }
 
 .hero__desc {
   line-height: rem(60px);
-  font-size: rem(65px);
+  font-size: rem(60px);
   font-weight: 500;
   @include lifehack();
   color: #fff;
   letter-spacing: rem(-1.63px);
+
+  @include tablets {
+    text-align: center;
+  }
+
+  @include for920px {
+    font-size: rem(50px);
+  }
 }
 
 .hamburger-menu-link {
@@ -119,7 +138,7 @@
   display: none;
 }
 
-@include tablets {
+@include for920px {
   .hamburger-menu-link {
     display: -webkit-box;
     display: -webkit-flex;
@@ -130,6 +149,7 @@
   .nav__list {
     display: none;
   }
+
 }
 
 .hamburger-menu-link__bars,

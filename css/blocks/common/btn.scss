@@ -9,6 +9,9 @@
   &--color_black {
     background-color: $black;
     width: rem(110px);
+    @include tablets{
+      margin: 0 auto;
+    }
   }
   &_bg-transparent{
     background-color: transparent;

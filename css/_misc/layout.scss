@@ -2,8 +2,17 @@ html,
 body {
   height: 100%;
 }
-html{
-  font-size: 16px;
+
+html {
+
+
+  @include tablets {
+    font-size: 14px;
+  }
+
+  @include phones {
+    font-size: 13px;
+  }
 }
 
 body {
@@ -19,15 +28,26 @@ body {
 .container {
   margin: 0 auto;
   position: relative;
-  width: 85%;
   display: flex;
+  width: 100%;
   flex-direction: column;
+  max-width: rem(940px);
+
+  @include for920px {
+    width: 85%
+  }
+
+  @include tablets {
+    width: rem(424px);
+  }
+  @include phones {
+    width: rem(333px);
+  }
 }
 
 .wrapper {
   position: relative;
   width: 100%;
-  min-width: rem(940px) + rem(20px);
   min-height: 100%;
   overflow: hidden;
 }
@@ -52,6 +72,7 @@ table {
 ul {
   padding: 0;
   margin: 0;
+
   li {
     list-style: none;
   }
@@ -87,6 +108,13 @@ footer {
   @include gagalin();
   color: $yellow;
   margin-bottom: rem(40px);
+
+  @include tablets {
+    text-align: center;
+
+    font-size: rem(72px);
+
+  }
 
   &_color {
     &_black {

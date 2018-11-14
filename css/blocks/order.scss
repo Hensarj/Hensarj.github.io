@@ -10,6 +10,10 @@
 
 .form__content {
   display: flex;
+
+  @include tablets {
+    flex-direction: column;
+  }
 }
 
 .form__input {
@@ -24,7 +28,12 @@
 
   &:not(:last-child) {
     margin-right: rem(20px);
+
+    @include tablets {
+      margin-right: 0px;
+    }
   }
+
 }
 
 .form__row {
@@ -153,6 +162,14 @@
 .order__form-button {
   margin-left: 3%;
   cursor: pointer;
+
+
+}
+
+.form__row--centered {
+  @include phones {
+    justify-content: center;
+  }
 }
 
 .order__form-button-reset {
@@ -172,7 +189,7 @@
   display: inline-flex;
   width: rem(30px);
   height: rem(30px);
-  transform:rotate(45deg);
+  transform: rotate(45deg);
   position: relative;
   margin-left: rem(-6px);
   margin-top: rem(2px);
@@ -197,11 +214,11 @@
   }
 }
 
-.form__row_flex{
+.form__row_flex {
   display: flex;
   margin-bottom: rem(21px);
 }
 
-.form__row_mt{
+.form__row_mt {
   margin-top: rem(20px);
 }

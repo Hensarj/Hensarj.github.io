@@ -14,6 +14,10 @@
     bottom: 0;
     display: flex;
     justify-content: flex-end;
+
+    @include tablets {
+        min-width: 100%;
+    }
 }
 
 .accordion-menu__list {
@@ -21,21 +25,33 @@
 
 }
 
+.accordion-menu__list_active {
+    width: 100%;
+}
+
 .accordion-menu__elem {
     display: flex;
-    .accordion-menu__drop{
+
+    .accordion-menu__drop {
         width: 0;
         overflow: hidden;
     }
 }
-.accordion-menu__elem_active{
-    .accordion-menu__link-text{
+
+.accordion-menu__elem_active {
+    .accordion-menu__link-text {
         color: $yellow;
     }
-    .accordion-menu__drop{
+
+    .accordion-menu__drop {
         width: initial;
         overflow: initial;
     }
+
+    .accordion-menu__text {
+        display: flex;
+    }
+
 
 }
 
