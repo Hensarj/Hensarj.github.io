@@ -625,7 +625,7 @@ footer {
     .section-title {
       text-align: center;
       font-size: 3.4375rem;
-      margin-bottom: 0; } }
+      margin-bottom: 0.625rem; } }
   @media screen and (max-width: 480px) {
     .section-title {
       font-size: 3.4375rem; } }
