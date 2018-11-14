@@ -5,7 +5,6 @@ body {
 
 html {
 
-
   @include tablets {
     font-size: 14px;
   }
@@ -104,15 +103,19 @@ footer {
 }
 
 .section-title {
-  font-size: rem(72px);
+  font-size: rem(70px);
   @include gagalin();
   color: $yellow;
   margin-bottom: rem(40px);
 
   @include tablets {
     text-align: center;
+    font-size: rem(55px);
+    margin-bottom: 0px;
+  }
 
-    font-size: rem(72px);
+  @include phones{
+    font-size: rem(40px);
 
   }
 
