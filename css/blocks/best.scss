@@ -4,6 +4,17 @@
 
   .container {
     width: 85%;
+
+    @include tablets {
+      width: 100%;
+    }
+  }
+}
+
+.container {
+  @include phones {
+    margin: 0;
+    width: 100%;
   }
 }
 
@@ -12,6 +23,7 @@
 
   @include phones {
     flex-direction: column;
+    width: 100%
   }
 }
 
@@ -25,6 +37,7 @@
   align-items: center;
 
   @include phones {
+    width: 95%;
     flex-direction: row;
     margin-bottom: rem(10px);
   }

@@ -824,6 +824,14 @@ footer {
   background-size: cover; }
   .best .container {
     width: 85%; }
+    @media screen and (max-width: 768px) {
+      .best .container {
+        width: 100%; } }
+
+@media screen and (max-width: 480px) {
+  .container {
+    margin: 0;
+    width: 100%; } }
 
 .best__list {
   display: -webkit-box;
@@ -834,7 +842,8 @@ footer {
       -webkit-box-orient: vertical;
       -webkit-box-direction: normal;
       -ms-flex-direction: column;
-      flex-direction: column; } }
+      flex-direction: column;
+      width: 100%; } }
 
 .best__item {
   margin-right: 2.3125rem;
@@ -854,6 +863,7 @@ footer {
   align-items: center; }
   @media screen and (max-width: 480px) {
     .best__item {
+      width: 95%;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
       -ms-flex-direction: row;
