@@ -55,7 +55,7 @@
   font-size: rem(14px);
   font-weight: 400;
   line-height: rem(11px);
-  margin-bottom: rem(30px);
+  margin-bottom: rem(15px);
 }
 
 .reviews__text {
@@ -64,7 +64,7 @@
   font-size: rem(14px);
   font-weight: 300;
   line-height: rem(24px);
-  margin-bottom: rem(12px);
+  margin-bottom: rem(5px);
 
   @include tablets {
     text-align: center;
