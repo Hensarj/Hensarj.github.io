@@ -6,15 +6,33 @@
   border-radius: rem(5px);
   display: inline-block;
 
+  &--border_none {
+    border: none;
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
   &--color_black {
     background-color: $black;
     width: rem(110px);
-    @include tablets{
+
+
+
+    @include tablets {
       margin: 0 auto;
     }
+
   }
-  &_bg-transparent{
+
+  &_bg-transparent {
+    border: none;
     background-color: transparent;
     margin-left: rem(5px);
+
+    &:hover {
+      cursor: pointer;
+    }
   }
 }

@@ -543,6 +543,10 @@ footer {
   text-decoration: none;
   border-radius: 0.3125rem;
   display: inline-block; }
+  .btn--border_none {
+    border: none; }
+    .btn--border_none:hover {
+      cursor: pointer; }
   .btn--color_black {
     background-color: #2f3234;
     width: 6.875rem; }
@@ -550,8 +554,11 @@ footer {
       .btn--color_black {
         margin: 0 auto; } }
   .btn_bg-transparent {
+    border: none;
     background-color: transparent;
     margin-left: 0.3125rem; }
+    .btn_bg-transparent:hover {
+      cursor: pointer; }
 
 .fixed-menu {
   position: fixed;
@@ -607,6 +614,10 @@ footer {
   text-decoration: none;
   border-radius: 0.3125rem;
   display: inline-block; }
+  .btn--border_none {
+    border: none; }
+    .btn--border_none:hover {
+      cursor: pointer; }
   .btn--color_black {
     background-color: #2f3234;
     width: 6.875rem; }
@@ -614,8 +625,11 @@ footer {
       .btn--color_black {
         margin: 0 auto; } }
   .btn_bg-transparent {
+    border: none;
     background-color: transparent;
     margin-left: 0.3125rem; }
+    .btn_bg-transparent:hover {
+      cursor: pointer; }
 
 .section-title {
   font-size: 3.75rem;
