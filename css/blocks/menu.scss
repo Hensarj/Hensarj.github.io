@@ -31,10 +31,16 @@
 
 .accordion-menu__elem {
     display: flex;
+    @include tablets{
+        flex: 0 1 auto;
+    }
 
     .accordion-menu__drop {
         width: 0;
         overflow: hidden;
+        @include tablets{
+            flex: 1;
+        }
     }
 }
 
@@ -62,6 +68,9 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
+    @include tablets{
+        flex: 0 1 auto;
+    }
 }
 
 .accordion-menu__link-text {
@@ -83,6 +92,9 @@
     color: #fff;
     padding: rem(30px);
     width: rem(500px);
+    @include tablets{
+        width: initial;
+    }
 }
 
 .accordion-menu__drop {

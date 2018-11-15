@@ -93,12 +93,13 @@
 }
 
 .hero__pic {
-  width: 50%;
+  width: rem(417px);
   text-align: center;
-
-  @include tablets {
-    width: 70%;
+  @include phones{
+    width: rem(333px);
   }
+
+
 }
 
 .hero__pic-img {
@@ -107,6 +108,7 @@
 
 .hero__text {
   width: 50%;
+  text-align: center;
   @include tablets {
     width: 100%;
   }

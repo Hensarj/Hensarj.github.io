@@ -1,9 +1,11 @@
 .to-next-section {
-    background: url('../img/icons/arrow-scroll.png');
+    background: url('../img/icons/arrow-scroll.png') center center no-repeat;
+    background-size: cover;
     width: rem(29px);
     height: rem(14px);
+    z-index: 15;
     position: absolute;
-    bottom: rem(52px);
+    bottom: rem(30px);
     left: 50%;
     transform:translate(-50%,-100%);
     border: none;

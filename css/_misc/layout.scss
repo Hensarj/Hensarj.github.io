@@ -37,10 +37,10 @@ body {
   }
 
   @include tablets {
-    width: rem(424px);
+    width: 87%;
   }
   @include phones {
-    width: rem(333px);
+    width: 85%;
   }
 }
 
@@ -111,7 +111,6 @@ footer {
   @include tablets {
     text-align: center;
     font-size: rem(55px);
-    margin-bottom: 0px;
   }
 
   @include phones{

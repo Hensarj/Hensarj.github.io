@@ -1,7 +1,15 @@
 .order {
   background: url('../img/bg/order.jpg') center center no-repeat;
   background-size: cover;
+
+  .section-title {
+    @include phones {
+      font-size: rem(30px);
+    }
+  }
 }
+
+
 
 .form__block-title {
   color: #fff;
@@ -217,6 +225,9 @@
 .form__row_flex {
   display: flex;
   margin-bottom: rem(21px);
+  @include tablets{
+    justify-content:space-around;
+  }
 }
 
 .form__row_mt {

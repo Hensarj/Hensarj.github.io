@@ -462,10 +462,10 @@ body {
       width: 85%; } }
   @media screen and (max-width: 768px) {
     .container {
-      width: 26.5rem; } }
+      width: 87%; } }
   @media screen and (max-width: 480px) {
     .container {
-      width: 20.8125rem; } }
+      width: 85%; } }
 
 .wrapper {
   position: relative;
@@ -527,8 +527,7 @@ footer {
   @media screen and (max-width: 768px) {
     .section-title {
       text-align: center;
-      font-size: 3.4375rem;
-      margin-bottom: 0px; } }
+      font-size: 3.4375rem; } }
   @media screen and (max-width: 480px) {
     .section-title {
       font-size: 2.5rem; } }
@@ -588,11 +587,13 @@ footer {
     transform: translate(-50%, -50%); }
 
 .to-next-section {
-  background: url("../img/icons/arrow-scroll.png");
+  background: url("../img/icons/arrow-scroll.png") center center no-repeat;
+  background-size: cover;
   width: 1.8125rem;
   height: 0.875rem;
+  z-index: 15;
   position: absolute;
-  bottom: 3.25rem;
+  bottom: 1.875rem;
   left: 50%;
   -webkit-transform: translate(-50%, -100%);
   -ms-transform: translate(-50%, -100%);
@@ -628,7 +629,8 @@ footer {
       margin-bottom: 0.625rem; } }
   @media screen and (max-width: 480px) {
     .section-title {
-      font-size: 3.4375rem; } }
+      font-size: 3.4375rem;
+      margin-bottom: 0.9375rem; } }
   .section-title_color_black {
     color: #2f3234; }
   .section-title_position_center {
@@ -747,17 +749,18 @@ footer {
   align-items: center; }
 
 .hero__pic {
-  width: 50%;
+  width: 26.0625rem;
   text-align: center; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     .hero__pic {
-      width: 70%; } }
+      width: 20.8125rem; } }
 
 .hero__pic-img {
   width: 100%; }
 
 .hero__text {
-  width: 50%; }
+  width: 50%;
+  text-align: center; }
   @media screen and (max-width: 768px) {
     .hero__text {
       width: 100%; } }
@@ -828,11 +831,6 @@ footer {
       .best .container {
         width: 95%; } }
 
-@media screen and (max-width: 480px) {
-  .container {
-    margin: 0;
-    width: 100%; } }
-
 .best__list {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -861,6 +859,10 @@ footer {
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center; }
+  @media screen and (max-width: 768px) {
+    .best__item {
+      margin-right: 0;
+      margin: 0 auto; } }
   @media screen and (max-width: 480px) {
     .best__item {
       width: 95%;
@@ -1131,6 +1133,9 @@ footer {
 .order {
   background: url("../img/bg/order.jpg") center center no-repeat;
   background-size: cover; }
+  @media screen and (max-width: 480px) {
+    .order .section-title {
+      font-size: 1.875rem; } }
 
 .form__block-title {
   color: #fff;
@@ -1320,6 +1325,10 @@ footer {
   display: -ms-flexbox;
   display: flex;
   margin-bottom: 1.3125rem; }
+  @media screen and (max-width: 768px) {
+    .form__row_flex {
+      -ms-flex-pack: distribute;
+      justify-content: space-around; } }
 
 .form__row_mt {
   margin-top: 1.25rem; }
@@ -1359,9 +1368,19 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
+  @media screen and (max-width: 768px) {
+    .accordion-menu__elem {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+      flex: 0 1 auto; } }
   .accordion-menu__elem .accordion-menu__drop {
     width: 0;
     overflow: hidden; }
+    @media screen and (max-width: 768px) {
+      .accordion-menu__elem .accordion-menu__drop {
+        -webkit-box-flex: 1;
+        -ms-flex: 1;
+        flex: 1; } }
 
 .accordion-menu__elem_active .accordion-menu__link-text {
   color: #f9b43b; }
@@ -1384,6 +1403,11 @@ footer {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat; }
+  @media screen and (max-width: 768px) {
+    .accordion-menu__link {
+      -webkit-box-flex: 0;
+      -ms-flex: 0 1 auto;
+      flex: 0 1 auto; } }
 
 .accordion-menu__link-text {
   position: absolute;
@@ -1407,6 +1431,9 @@ footer {
   color: #fff;
   padding: 1.875rem;
   width: 31.25rem; }
+  @media screen and (max-width: 768px) {
+    .accordion-menu__text {
+      width: initial; } }
 
 .accordion-menu__drop {
   background-color: rgba(47, 50, 52, 0.9); }

@@ -11,12 +11,12 @@
   }
 }
 
-.container {
-  @include phones {
-    margin: 0;
-    width: 100%;
-  }
-}
+// .container {
+//   @include phones {
+//     margin: 0;
+//     width: 100%;
+//   }
+// }
 
 .best__list {
   display: flex;
@@ -35,6 +35,11 @@
   text-align: center;
   flex: 1;
   align-items: center;
+
+  @include tablets{
+    margin-right: 0;
+    margin: 0 auto;
+  }
 
   @include phones {
     width: 95%;
