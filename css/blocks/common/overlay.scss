@@ -5,24 +5,58 @@
     left: 0;
     right: 0;
     bottom: 0;
-    background: #0005;
+    background: rgba(0, 0, 0, 0.5);
     justify-content: center;
     align-items: center;
     z-index: 50;
 }
 
-.container {
+.overlay__container {
     position: relative;
 }
 
-.content {
-    width: 100%;
-    background: #444;
-    border-radius: 5px;
-    padding: 10px;
-    color: #fff;
-    font: 16px Helvetica, sans-serif;
-    margin: 0;
+.overlay__list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: rem(20px);
+    @include ubuntu();
+}
+
+.overlay__item {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    a {
+        text-decoration: none;
+
+        &:link {
+            color: white;
+        }
+
+        &:visited {
+            color: white;
+        }
+    }
+}
+
+.overlay__item:after {
+    content: "";
+    width: rem(5px);
+    height: rem(5px);
+    background-color: white;
+    display: block;
+    border-radius: 50%;
+    margin: rem(10px);
+}
+
+.overlay__item:last-child::after {
+    display: none;
+
 }
 
 .close {

@@ -46,6 +46,10 @@
 .slider__col {
     width: 50%;
     vertical-align: middle;
+
+    @include tablets() {
+        width: 100%;
+    }
 }
 
 .kkal {
@@ -57,10 +61,15 @@
 }
 
 .slider__img {
+    margin: 0 auto;
     width: 85%;
     height: 100%;
     background: center center no-repeat;
     background-size: contain;
+
+    @include tablets() {
+        height: rem(200px);
+    }
 }
 
 .slider__text {
@@ -70,11 +79,16 @@
     font-weight: 300;
     line-height: rem(23.97px);
     margin-bottom: rem(36px);
+    text-align: center;
 }
 
 .slider__info {
     display: flex;
     color: #e35028;
+
+    @include tablets() {
+        justify-content: center;
+    }
 
 }
 
@@ -178,6 +192,13 @@
     line-height: rem(28.11px);
 }
 
+.slider__elem {
+    @include tablets() {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
 .kkal {
     position: absolute;
     left: 0;
@@ -189,6 +210,11 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+
+    @include tablets() {
+        top: rem(-20px);
+        left: calc(100% - 60px);
+    }
 }
 
 .kkal__icon {
