@@ -39,6 +39,7 @@ body {
   @include tablets {
     width: 87%;
   }
+
   @include phones {
     width: 85%;
   }
@@ -113,7 +114,7 @@ footer {
     font-size: rem(55px);
   }
 
-  @include phones{
+  @include phones {
     font-size: rem(40px);
 
   }
@@ -121,6 +122,10 @@ footer {
   &_color {
     &_black {
       color: $black;
+    }
+
+    &_white {
+      color: white !important;
     }
 
   }

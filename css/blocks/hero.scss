@@ -95,7 +95,8 @@
 .hero__pic {
   width: rem(417px);
   text-align: center;
-  @include phones{
+
+  @include phones {
     width: rem(333px);
   }
 
@@ -109,6 +110,7 @@
 .hero__text {
   width: 50%;
   text-align: center;
+
   @include tablets {
     width: 100%;
   }
@@ -138,6 +140,7 @@
   align-items: center;
   margin-left: 1.875rem;
   display: none;
+  z-index: 100;
 }
 
 @include for920px {
@@ -161,6 +164,7 @@
   width: 1.5rem;
   height: 0.3125rem;
   border-radius: 0.1875rem;
+
 }
 
 .hamburger-menu-link__bars:before,
@@ -178,7 +182,24 @@
   bottom: 0;
 }
 
+
+.hamburger-menu-link--crossed {
+  transform: rotate(45deg);
+
+  &::after {
+    transform: rotate(270deg);
+  }
+
+  &::before {
+    display: none;
+  }
+}
+
+
+
+
 .logo {
   width: rem(92px);
   margin-right: rem(10px);
+  z-index: 100;
 }

@@ -28,11 +28,13 @@ $phones: 480px;
 @import "blocks/common/to-next-section.scss";
 @import "blocks/common/btn.scss";
 @import "blocks/common/section-title.scss";
+@import "blocks/common/overlay.scss";
 
 
 // blocks
 @import "blocks/hero.scss";
 @import "blocks/best.scss";
+@import "blocks/slider.scss";
 @import "blocks/team.scss";
 @import "blocks/reviews.scss";
 @import "blocks/order.scss";
