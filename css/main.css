@@ -651,6 +651,8 @@ footer {
     color: #2f3234; }
   .section-title_position_center {
     text-align: center; }
+  .section-title_centered {
+    text-align: center; }
 
 .overlay {
   display: none;

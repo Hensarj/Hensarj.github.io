@@ -11,7 +11,7 @@
 
   }
 
-  @include phones{
+  @include phones {
     font-size: rem(55px);
     margin-bottom: rem(15px);
 
@@ -28,5 +28,11 @@
     &_center {
       text-align: center;
     }
+
+
+  }
+
+  &_centered {
+    text-align: center;
   }
 }
