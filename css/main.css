@@ -1757,6 +1757,9 @@ footer {
         -ms-flex: 1;
         flex: 1; } }
 
+.accordion-menu__elem_active .accordion-menu__link {
+  display: block; }
+
 .accordion-menu__elem_active .accordion-menu__link-text {
   color: #f9b43b; }
 
@@ -1783,6 +1786,9 @@ footer {
       -webkit-box-flex: 0;
       -ms-flex: 0 1 auto;
       flex: 0 1 auto; } }
+  @media screen and (max-width: 480px) {
+    .accordion-menu__link {
+      display: none; } }
 
 .accordion-menu__link-text {
   position: absolute;
@@ -1812,6 +1818,16 @@ footer {
 
 .accordion-menu__drop {
   background-color: rgba(47, 50, 52, 0.9); }
+
+.accordion-menu .hamburger-menu-link {
+  position: absolute;
+  display: none;
+  left: 85%;
+  top: 1.875rem;
+  opacity: 0.5; }
+  @media screen and (max-width: 480px) {
+    .accordion-menu .hamburger-menu-link {
+      display: block; } }
 
 .footer {
   position: absolute;

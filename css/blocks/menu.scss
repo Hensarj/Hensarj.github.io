@@ -31,20 +31,27 @@
 
 .accordion-menu__elem {
     display: flex;
-    @include tablets{
+
+    @include tablets {
         flex: 0 1 auto;
     }
 
     .accordion-menu__drop {
         width: 0;
         overflow: hidden;
-        @include tablets{
+
+        @include tablets {
             flex: 1;
         }
     }
 }
 
 .accordion-menu__elem_active {
+
+    .accordion-menu__link {
+        display: block;
+    }
+
     .accordion-menu__link-text {
         color: $yellow;
     }
@@ -68,8 +75,13 @@
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    @include tablets{
+
+    @include tablets {
         flex: 0 1 auto;
+    }
+
+    @include phones() {
+        display: none;
     }
 }
 
@@ -92,11 +104,26 @@
     color: #fff;
     padding: rem(30px);
     width: rem(500px);
-    @include tablets{
+
+    @include tablets {
         width: initial;
     }
 }
 
 .accordion-menu__drop {
     background-color: rgba(47, 50, 52, 0.9);
+}
+
+.accordion-menu {
+    .hamburger-menu-link {
+        position: absolute;
+        display: none;
+        left: 85%;
+        top: rem(30px);
+        opacity: 0.5;
+
+        @include phones() {
+            display: block;
+        }
+    }
 }
