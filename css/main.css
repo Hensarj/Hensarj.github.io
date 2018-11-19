@@ -1822,7 +1822,7 @@ footer {
 .accordion-menu .hamburger-menu-link {
   position: absolute;
   display: none;
-  left: 85%;
+  left: 80%;
   top: 1.875rem;
   opacity: 0.5; }
   @media screen and (max-width: 480px) {
