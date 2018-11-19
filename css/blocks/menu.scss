@@ -30,7 +30,9 @@
     width: 100%;
 
     .accordion-menu__elem {
-        display: none;
+        @include tablets() {
+            display: none;
+        }
     }
 
 }

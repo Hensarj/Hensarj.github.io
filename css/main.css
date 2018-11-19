@@ -1739,8 +1739,9 @@ footer {
 
 .accordion-menu__list_active {
   width: 100%; }
-  .accordion-menu__list_active .accordion-menu__elem {
-    display: none; }
+  @media screen and (max-width: 768px) {
+    .accordion-menu__list_active .accordion-menu__elem {
+      display: none; } }
 
 .accordion-menu__elem {
   display: -webkit-box;
