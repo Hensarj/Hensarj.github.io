@@ -1042,6 +1042,21 @@ footer {
   -ms-flex-align: center;
   align-items: center; }
 
+.slider__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  overflow: hidden; }
+
+.slider__elem {
+  position: relative;
+  width: 100%;
+  -webkit-box-flex: 1;
+  -ms-flex: 1 0 auto;
+  flex: 1 0 auto;
+  height: 100%; }
+
 .slider__icon {
   width: 1.6875rem;
   height: 0.8125rem;
@@ -1154,7 +1169,7 @@ footer {
 .composition {
   position: absolute;
   left: 0;
-  top: -2.1875rem;
+  top: 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex; }
@@ -1228,7 +1243,7 @@ footer {
 .kkal {
   position: absolute;
   left: 0;
-  top: 90%;
+  bottom: 0.375rem;
   width: 3.75rem;
   height: 3.75rem;
   opacity: 0.5;
@@ -1247,7 +1262,7 @@ footer {
   flex-direction: column; }
   @media screen and (max-width: 768px) {
     .kkal {
-      top: -1.25rem;
+      top: 1.25rem;
       left: calc(100% - 60px); } }
 
 .kkal__icon .icon {
@@ -1718,6 +1733,13 @@ footer {
   background-repeat: no-repeat;
   padding: 6.9375rem 6.375rem;
   position: relative; }
+  .section_menu .hamburger-menu-link {
+    z-index: 0;
+    display: none; }
+    @media screen and (max-width: 480px) {
+      .section_menu .hamburger-menu-link {
+        z-index: 0;
+        display: block; } }
 
 .accordion-menu {
   position: absolute;
@@ -1741,7 +1763,7 @@ footer {
 
 .accordion-menu__list_active {
   width: 100%; }
-  @media screen and (max-width: 768px) {
+  @media screen and (max-width: 480px) {
     .accordion-menu__list_active .accordion-menu__elem {
       display: none; } }
 
@@ -1823,15 +1845,17 @@ footer {
 .accordion-menu__drop {
   background-color: rgba(47, 50, 52, 0.9); }
 
-.accordion-menu .hamburger-menu-link {
+.accordion-menu__elem_active .hamburger-menu-link {
   position: absolute;
-  display: none;
+  display: none !important;
   left: 80%;
   top: 1.875rem;
-  opacity: 0.5; }
-  @media screen and (max-width: 480px) {
-    .accordion-menu .hamburger-menu-link {
-      display: block; } }
+  opacity: 0.5;
+  z-index: 0;
+  display: block; }
+  @media screen and (max-width: 768px) {
+    .accordion-menu__elem_active .hamburger-menu-link {
+      display: block !important; } }
 
 .footer {
   position: absolute;

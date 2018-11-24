@@ -14,6 +14,19 @@
     align-items: center;
 }
 
+.slider__list {
+    display: flex;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider__elem {
+    position: relative;
+    width: 100%;
+    flex: 1 0 auto;
+    height: 100%;
+}
+
 .slider__icon {
     width: rem(27px);
     height: rem(13px);
@@ -125,7 +138,7 @@
 .composition {
     position: absolute;
     left: 0;
-    top: rem(-35px);
+    top: 0;
     display: flex;
 
     &:hover {
@@ -203,7 +216,7 @@
 .kkal {
     position: absolute;
     left: 0;
-    top: 90%;
+    bottom: rem(6px);
     width: rem(60px);
     height: rem(60px);
     opacity: 0.5;
@@ -213,7 +226,7 @@
     flex-direction: column;
 
     @include tablets() {
-        top: rem(-20px);
+        top: rem(20px);
         left: calc(100% - 60px);
     }
 }

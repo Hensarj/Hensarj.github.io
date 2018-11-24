@@ -5,6 +5,18 @@
     background-repeat: no-repeat;
     padding: rem(111px) rem(102px);
     position: relative;
+
+    .hamburger-menu-link {
+        z-index: 0;
+        display: none;
+
+        @include phones {
+            z-index: 0;
+            display: block;
+        }
+    }
+
+
 }
 
 .accordion-menu {
@@ -30,7 +42,7 @@
     width: 100%;
 
     .accordion-menu__elem {
-        @include tablets() {
+        @include phones() {
             display: none;
         }
     }
@@ -121,16 +133,22 @@
     background-color: rgba(47, 50, 52, 0.9);
 }
 
-.accordion-menu {
+.accordion-menu__elem_active {
     .hamburger-menu-link {
         position: absolute;
-        display: none;
+        display: none !important;
         left: 80%;
         top: rem(30px);
         opacity: 0.5;
 
-        @include phones() {
-            display: block;
+
+        z-index: 0;
+        display: block;
+
+        @include tablets {
+            display: block !important;
+
         }
+
     }
 }
