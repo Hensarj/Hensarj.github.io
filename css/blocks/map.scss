@@ -24,7 +24,8 @@
 
 .footer__contacts {
     flex: 1;
-    @include phones{
+
+    @include phones {
         display: flex;
         flex-direction: column;
         justify-content: center;
