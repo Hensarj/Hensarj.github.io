@@ -4,12 +4,16 @@
 
 .container_slider {
     vertical-align: middle;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    text-align: center;
 }
 
 .slider {
+    padding: 0 5%;
     display: flex;
     position: relative;
-    padding: 0 5%;
     justify-content: center;
     align-items: center;
 }
@@ -17,7 +21,7 @@
 .slider__list {
     display: flex;
     width: 100%;
-    overflow: hidden;
+    position: relative;
 }
 
 .slider__elem {
@@ -36,6 +40,7 @@
 .slider__arrow {
     display: flex;
     position: absolute;
+    z-index: 100500;
 }
 
 .slider__arrow_left {

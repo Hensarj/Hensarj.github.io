@@ -1027,14 +1027,22 @@ footer {
   background: linear-gradient(to bottom, #f9b43b 0%, #eb8c38 50%, #f9b43b 100%); }
 
 .container_slider {
-  vertical-align: middle; }
+  vertical-align: middle;
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  text-align: center; }
 
 .slider {
+  padding: 0 5%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   position: relative;
-  padding: 0 5%;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
   justify-content: center;
@@ -1047,7 +1055,7 @@ footer {
   display: -ms-flexbox;
   display: flex;
   width: 100%;
-  overflow: hidden; }
+  position: relative; }
 
 .slider__elem {
   position: relative;
@@ -1066,7 +1074,8 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  position: absolute; }
+  position: absolute;
+  z-index: 100500; }
 
 .slider__arrow_left {
   -webkit-transform: rotate(90deg);

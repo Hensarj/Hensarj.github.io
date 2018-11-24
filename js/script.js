@@ -6,6 +6,7 @@ const menuLink = document.querySelectorAll('.overlay__item a');
 const teamAccoTrigger = document.querySelectorAll('.team_acco__trigger');
 const crosses = document.querySelectorAll('.cross');
 
+
 openButton.addEventListener('click', function (e) {
     e.preventDefault();
     bars.classList.toggle('hamburger-menu-link--crossed');
@@ -91,3 +92,34 @@ for (var i = 0; i < crosses.length; i++) {
 
     })
 }
+
+
+const left = document.querySelector(".slider__arrow_left");
+const right = document.querySelector(".slider__arrow_right");
+const items = document.querySelector(".slider__list");
+const item = document.querySelector(".slider__elem");
+
+const minRight = 0;
+const stepElem = getComputedStyle(item);
+step = parseInt(stepElem.width);
+const maxRight = 2 * step;
+
+let currentRight = 0;
+
+items.style.right = currentRight;
+
+right.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (currentRight < maxRight) {
+        currentRight += step;
+        items.style.right = currentRight + "px";
+    }
+});
+
+left.addEventListener("click", function (e) {
+    e.preventDefault();
+    if (currentRight > minRight) {
+        currentRight -= step;
+        items.style.right = currentRight + "px";
+    }
+});
