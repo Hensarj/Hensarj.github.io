@@ -1455,6 +1455,9 @@ footer {
       -ms-flex-align: center;
       align-items: center; } }
 
+.reviews {
+  position: relative; }
+
 .reviews__list {
   height: 100%;
   display: -webkit-box;
@@ -1530,6 +1533,51 @@ footer {
   @media screen and (max-width: 480px) {
     .reviews__text {
       display: none; } }
+
+.overlay-reviews {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 100500;
+  border-radius: 0.625rem;
+  display: none; }
+  .overlay-reviews .hamburger-menu-link__bars {
+    left: 0.1875rem;
+    top: 0.75rem;
+    position: absolute; }
+  .overlay-reviews .cross {
+    top: -0.9375rem;
+    right: -0.9375rem;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    display: block;
+    background: red;
+    width: 1.875rem;
+    height: 1.875rem;
+    border-radius: 50%; }
+
+.overlay-reviews__container {
+  width: 18.75rem;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  font-family: 'Gagalin-Regular', Helvetica, sans-serif; }
+
+.overlay-reviews__content {
+  width: 18.75rem; }
 
 .order {
   background: url("../img/bg/order.jpg") center center no-repeat;

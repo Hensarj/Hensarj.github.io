@@ -1,3 +1,7 @@
+.reviews {
+  position: relative;
+}
+
 .reviews__list {
   height: 100%;
   display: flex;
@@ -73,5 +77,55 @@
   @include phones {
     display: none;
   }
+
+}
+
+.overlay-reviews {
+  position: absolute;
+  top: 10%;
+  left: 10%;
+  right: 10%;
+  bottom: 10%;
+  background-color: rgba(255, 255, 255, 0.9);
+  z-index: 100500;
+  border-radius: rem(10px);
+
+  .hamburger-menu-link__bars {
+    left: rem(3px);
+    top: rem(12px);
+    position: absolute;
+  }
+
+  .cross {
+    top: rem(-15px);
+    right: rem(-15px);
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    display: block;
+    background: red;
+    width: rem(30px);
+    height: rem(30px);
+    border-radius: 50%;
+
+  }
+
+  display: none;
+
+}
+
+.overlay-reviews__container {
+  width: rem(300px);
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  @include gagalin();
+}
+
+.overlay-reviews__content {
+  width: rem(300px);
 
 }
