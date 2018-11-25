@@ -164,7 +164,7 @@ sendButton.addEventListener('click', function (e) {
         xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
         xhr.send(data);
         xhr.addEventListener('load', function () {
-            console.log(xhr.response.status);
+            console.log(xhr.response);
         });
     };
 
