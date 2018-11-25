@@ -147,3 +147,44 @@ reviewsClose.addEventListener('click', function (e) {
 
 
 })
+
+const myForm = document.querySelector('.form__elem');
+const sendButton = document.querySelector('#order');
+
+sendButton.addEventListener('click', function (e) {
+    e.preventDefault();
+    if (validateForm(myForm)) {
+        const data = new FormData();
+        data.append('name', myForm.elements.name.value);
+        data.append('phone', myForm.elements.phone.value);
+        data.append('comment', myForm.elements.comment.value);
+        data.append('to', "oleg.abalyaev@gmail.com");
+
+        const xhr = new XMLHttpRequest();
+        xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
+        xhr.send(data);
+        xhr.addEventListener('load', function () {
+            console.log(xhr.response.status);
+        });
+    };
+
+    function validateForm(form) {
+
+
+        let valid = true;
+        if (!validateField(form.elements.name)) {
+            valid = false;
+        }
+        if (!validateField(form.elements.phone)) {
+            valid = false;
+        }
+        if (!validateField(form.elements.comment)) {
+            valid = false;
+        }
+        return valid;
+    }
+
+    function validateField(field) {
+        return field.checkValidity();
+    }
+})
