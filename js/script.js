@@ -195,6 +195,9 @@ sendButton.addEventListener('click', function (e) {
     }
 })
 
-new fullpage('#fullpage', {
 
+
+new fullpage('#fullpage', {
+    // anchors: ['section_hero', 'section_best', 'section_slider', 'section_team', 'section_reviews', 'section_how_work', 'section_order', 'section_menu', 'section_map'],
+    menu: '#myMenu'
 });
