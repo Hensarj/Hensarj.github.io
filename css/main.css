@@ -446,6 +446,7 @@ body {
   color: #2f3234; }
 
 .container {
+  height: 100%;
   margin: 0 auto;
   position: relative;
   display: -webkit-box;
@@ -466,6 +467,13 @@ body {
   @media screen and (max-width: 480px) {
     .container {
       width: 85%; } }
+  .container-delivery {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
 
 .wrapper {
   position: relative;
@@ -501,8 +509,8 @@ footer {
   width: 100%; }
 
 * {
-  -webkit-box-sizing: border-box;
-  box-sizing: border-box; }
+  -webkit-box-sizing: border-box !important;
+  box-sizing: border-box !important; }
 
 .section {
   min-height: 40.625rem;
@@ -519,6 +527,14 @@ footer {
     -ms-flex-pack: center;
     justify-content: center; }
 
+.delivery-title {
+  position: absolute;
+  left: 50%;
+  -webkit-transform: translate(-50%);
+  -ms-transform: translate(-50%);
+  transform: translate(-50%);
+  top: 1.25rem; }
+
 .section-title {
   font-size: 4.375rem;
   font-family: 'Gagalin-Regular', Helvetica, sans-serif;
@@ -532,7 +548,14 @@ footer {
     .section-title {
       font-size: 2.5rem; } }
   .section-title_color_black {
-    color: #2f3234; }
+    color: #2f3234;
+    position: absolute;
+    left: 50%;
+    -webkit-transform: translate(-50%);
+    -ms-transform: translate(-50%);
+    transform: translate(-50%);
+    position: absolute;
+    top: 1.25rem; }
   .section-title_color_white {
     color: white !important; }
   .section-title_position_center {
@@ -941,7 +964,16 @@ footer {
   background: url("../img/bg/best.jpg") center center no-repeat;
   background-size: cover; }
   .best .container {
-    width: 85%; }
+    width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
     @media screen and (max-width: 768px) {
       .best .container {
         width: 95%; } }
@@ -2023,3 +2055,24 @@ footer {
   fill: grey; }
   .social__icon:hover {
     fill: white; }
+
+.how_work {
+  background: url("../img/bg/how_work.png") center center no-repeat;
+  background-size: cover; }
+  .how_work .container {
+    width: 85%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    @media screen and (max-width: 768px) {
+      .how_work .container {
+        width: 95%; } }
+
+#video {
+  width: 100%; }

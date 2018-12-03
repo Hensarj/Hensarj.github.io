@@ -15,13 +15,18 @@
   <title>Главная страница
   </title>
   <link rel="stylesheet" href="./css/main.css">
+  <script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU" type="text/javascript">
+
+  </script>
+  <script src="js/yandex.js">
+  </script>
 </head>
 
 <body>
   <div class="wrapper">
-    <div class="maincontent">
+    <div class="maincontent" id="fullpage">
 
-      <section class="section hero">
+      <section class="section hero" data-anchor="section_hero">
         <div class="container hero__container">
           <header class="header">
             <a class="logo">
@@ -31,32 +36,32 @@
               <nav class="nav">
                 <ul class="nav__list">
                   <li class="nav__item">
-                    <a href="#" class="nav__link">
+                    <a href="#section_hero" class="nav__link">
                       о нас
                     </a>
                   </li>
                   <li class="nav__item">
-                    <a href="#" class="nav__link">
+                    <a href="#section_slider" class="nav__link">
                       бургеры </a>
                   </li>
                   <li class="nav__item">
-                    <a href="#" class="nav__link">
+                    <a href="#section_team" class="nav__link">
                       команда </a>
                   </li>
                   <li class="nav__item">
-                    <a href="#" class="nav__link">
+                    <a href="#section_menu" class="nav__link">
                       меню </a>
                   </li>
                   <li class="nav__item">
-                    <a href="#" class="nav__link">
+                    <a href="#section_reviews" class="nav__link">
                       отзывы </a>
                   </li>
                   <li class="nav__item">
-                    <a href="#" class="nav__link">
+                    <a href="#section_how_work" class="nav__link">
                       как мы работаем </a>
                   </li>
                   <li class="nav__item">
-                    <a href="#" class="nav__link">
+                    <a href="#section_map" class="nav__link">
                       контакты </a>
                   </li>
                 </ul>
@@ -97,7 +102,7 @@
 
       </section>
 
-      <section class="section best section_centered">
+      <section class="section best section_centered" data-anchor="section_best">
         <div class="container">
           <div class="section-title section-title_color_black section-title_position_center">
             Мы лучшие
@@ -150,7 +155,7 @@
         </div>
       </section>
 
-      <section class="section section_slider section_centered">
+      <section class="section section_slider section_centered" data-anchor="section_slider">
         <div class="container container_slider">
           <a href="#" class="slider__arrow slider__arrow_left">
             <svg class="slider__icon">
@@ -434,7 +439,7 @@
           </a>
         </div>
       </section>
-      <section class="section team">
+      <section class="section team" data-anchor="section_team">
         <div class="team__container">
           <div class="team__content">
             <div class="section-title">Команда</div>
@@ -512,7 +517,7 @@
         </div>
       </section>
 
-      <section class="section reviews">
+      <section class="section reviews" data-anchor="section_reviews">
         <ul class="reviews__list">
           <li class="reviews__item" style="background-image: url('./img/content/reviews/photo-1.png')">
             <div class="reviews__hover">
@@ -599,9 +604,48 @@
         </div>
       </section>
 
-      <section class="section order section_centered">
-        <div class="container">
-          <div class="section-title section-title_centered">Закажите доставку</div>
+
+
+
+
+
+      <section class="section how_work" data-anchor="section_how_work">
+        <div class="container container-how_work">
+          <div class="section-title section-title_color_black section-title_position_center">Как мы работаем </div>
+          <video id='video' controls="controls" preload='none' width="600" poster="http://media.w3.org/2010/05/sintel/poster.png">
+            <source id='mp4' src="http://media.w3.org/2010/05/sintel/trailer.mp4" type='video/mp4' />
+            <source id='webm' src="http://media.w3.org/2010/05/sintel/trailer.webm" type='video/webm' />
+            <source id='ogv' src="http://media.w3.org/2010/05/sintel/trailer.ogv" type='video/ogg' />
+            <!--
+            Track to be used for accessibility using the VTT standard. 
+  
+            See https://www.html5rocks.com/en/tutorials/track/basics/ for more information on how to use text tracks
+          -->
+            <track kind="subtitles" label="English subtitles" src="subtitles_en.vtt" srclang="en" default>
+            </track>
+            <!-- 
+          We can also add more than one text track and let the user choose which one to play. There is now way to 
+          currently do this with the built in controls so it'll have to be scripted -->
+            <track kind="subtitles" label="Deutsche Untertitel" src="subtitles_de.vtt" srclang="de">
+            </track>
+
+            <!-- 
+            We're not using Flash as a fallback option. It should be coverage enough to 
+          -->
+            <p>Your user agent does not support the HTML5 Video element.</p>
+          </video>
+        </div>
+      </section>
+
+
+
+
+
+
+
+      <section class="section order section_centered" data-anchor="section_order">
+        <div class="container container-delivery">
+          <div class="section-title section-title_centered delivery-title">Закажите доставку</div>
           <div class="form">
             <form action="" class="form__elem">
               <div class="form__content">
@@ -757,31 +801,11 @@
 
         </div>
       </section>
-      <section class="section map">
+      <section class="section map" data-anchor="section_map">
         <!--The div element for the map -->
         <div id="map" style="width: 100%; height: 100%"></div>
 
-        <script src="https://api-maps.yandex.ru/2.1/?apikey=<ваш API-ключ>&lang=ru_RU" type="text/javascript">
-        </script>
-        <script type="text/javascript">
-          // Функция ymaps.ready() будет вызвана, когда
-          // загрузятся все компоненты API, а также когда будет готово DOM-дерево.
-          ymaps.ready(init);
 
-          function init() {
-            // Создание карты.    
-            var myMap = new ymaps.Map("map", {
-              // Координаты центра карты.
-              // Порядок по умолчанию: «широта, долгота».
-              // Чтобы не определять координаты центра карты вручную,
-              // воспользуйтесь инструментом Определение координат.
-              center: [55.76, 37.64],
-              // Уровень масштабирования. Допустимые значения:
-              // от 0 (весь мир) до 19.
-              zoom: 7
-            });
-          }
-        </script>
         <footer class="footer">
           <div class="footer-content">
             <div class="contacts footer__contacts">
@@ -813,24 +837,33 @@
   </div>
   <ul class="fixed-menu">
     <li class="fixed-menu__item active">
-      <a href="#" class="fixed-menu__link"></a>
+      <a href="#section_hero" class="fixed-menu__link"></a>
     </li>
     <li class="fixed-menu__item">
-      <a href="#" class="fixed-menu__link"></a>
+      <a href="#section_best" class="fixed-menu__link"></a>
     </li>
     <li class="fixed-menu__item">
-      <a href="#" class="fixed-menu__link"></a>
+      <a href="#section_slider" class="fixed-menu__link"></a>
     </li>
     <li class="fixed-menu__item">
-      <a href="#" class="fixed-menu__link"></a>
+      <a href="#section_team" class="fixed-menu__link"></a>
     </li>
     <li class="fixed-menu__item">
-      <a href="#" class="fixed-menu__link"></a>
+      <a href="#section_reviews" class="fixed-menu__link"></a>
+    </li>
+    <li class="fixed-menu__item">
+      <a href="#section_order" class="fixed-menu__link"></a>
+    </li>
+    <li class="fixed-menu__item">
+      <a href="#section_map" class="fixed-menu__link"></a>
     </li>
   </ul>
 
 </body>
 
+<script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+<script src="js/fullpage.js"></script>
 <script src="js/script.js"></script>
 
 </html>

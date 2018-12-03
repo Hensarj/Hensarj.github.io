@@ -1,0 +1,19 @@
+.how_work {
+    background: url('../img/bg/how_work.png') center center no-repeat;
+    background-size: cover;
+
+    .container {
+        width: 85%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @include tablets {
+            width: 95%;
+        }
+    }
+}
+
+#video {
+    width: 100%;
+}

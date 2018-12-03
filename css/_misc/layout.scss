@@ -25,6 +25,7 @@ body {
 }
 
 .container {
+  height: 100%;
   margin: 0 auto;
   position: relative;
   display: flex;
@@ -42,6 +43,11 @@ body {
 
   @include phones {
     width: 85%;
+  }
+
+  &-delivery {
+    display: flex;
+    justify-content: center;
   }
 }
 
@@ -89,7 +95,7 @@ footer {
 }
 
 * {
-  box-sizing: border-box;
+  box-sizing: border-box !important;
 }
 
 .section {
@@ -101,6 +107,13 @@ footer {
     flex-direction: column;
     justify-content: center;
   }
+}
+
+.delivery-title {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: rem(20px);
 }
 
 .section-title {
@@ -122,6 +135,12 @@ footer {
   &_color {
     &_black {
       color: $black;
+      position: absolute;
+      left: 50%;
+      transform: translate(-50%);
+      position: absolute;
+      top: rem(20px);
+      // padding-top: rem(40px);
     }
 
     &_white {

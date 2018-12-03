@@ -164,18 +164,24 @@ sendButton.addEventListener('click', function (e) {
         xhr.open('POST', 'https://webdev-api.loftschool.com/sendmail');
         xhr.send(data);
         xhr.addEventListener('load', function () {
-            console.log(xhr.response);
+            var jsonRespons = xhr.status;
+            if (jsonRespons <= '200') {
+                window.alert("Все ОК!");
+            } else {
+                window.alert("Что-то пошло не так");
+            }
         });
-    };
+
+    } else {
+        window.alert("Неверно заполнена форма");
+    }
 
     function validateForm(form) {
-
-
         let valid = true;
         if (!validateField(form.elements.name)) {
             valid = false;
         }
-        if (!validateField(form.elements.phone)) {
+        if ((!validateField(form.elements.phone)) || (isNaN(form.elements.phone.value))) {
             valid = false;
         }
         if (!validateField(form.elements.comment)) {
@@ -188,3 +194,7 @@ sendButton.addEventListener('click', function (e) {
         return field.checkValidity();
     }
 })
+
+new fullpage('#fullpage', {
+
+});
